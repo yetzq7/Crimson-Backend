@@ -13,7 +13,7 @@
 - Nothing rn
 
 # Future Features
-- [ ] Discord Bot
+- [ ] Mobile Fixes
 - [ ] Tournament System
 - [ ] Universal Arena Support
 - [ ] Matchmaking V2
