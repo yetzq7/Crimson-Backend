@@ -12,12 +12,12 @@
 - Nothing rn
 
 # Future Features
-- [] Discord Bot
-- [] Tournament System
-- [] Universal Arena Support
-- [] Matchmaking V2
-- [] XMPP
-- [] Easy Config
+- [ ] Discord Bot
+- [ ] Tournament System
+- [ ] Universal Arena Support
+- [ ] Matchmaking V2
+- [ ] XMPP
+- [ ] Easy Config
 
 
 
