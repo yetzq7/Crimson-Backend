@@ -1,0 +1,35 @@
+const express = require("express");
+const app = express();
+
+app.get('/api/content/pages/*', (req, res) => {
+
+const { accountId, username } = req.body; // extracting data from the request body
+const { accountId, username } = req.params; // extracting data from the request params | e.g: rout is '/fortnite/:accountId/:username'
+const { accountId, username } = req.query; // extracting data from the request query ex: http://localhost:3551/account?accountid=6767&username=fnproj
+
+// sends response back
+res.send({
+    status: "OK",
+    code: 200
+})
+
+// starts express
+app.listen(3551); // proper console log
+    console.log("Crimson started listening on ${Port}")
+
+})
+
+// OR send a response back with a status code
+// res.status(200).send({
+//    status: "OK",
+//    code: 200
+// })
+
+// may also be async
+// express.get('content/api/pages/*', async (req, res) => {
+//
+// })
+
+// ALL SENT IN JSON FORMAT
+
+module.exports = app; // end smt

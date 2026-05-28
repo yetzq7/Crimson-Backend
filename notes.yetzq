@@ -1,0 +1,3 @@
+## define routes like this
+
+app.get("/fortnite/api/calendar/v1/timeline", (req, res) => {
