@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.get(/lightswitch/api/service/Fortnite/status, async (res, req) => {
+app.get('/lightswitch/api/service/Fortnite/status/*', async (res, req) => {
     res.status(200).send({
          "serviceInstanceId": "fortnite",
          "status": "UP",
@@ -20,7 +20,7 @@ app.get(/lightswitch/api/service/Fortnite/status, async (res, req) => {
     });
 });
 
-app.get(/lightswitch/api/service/bulk/status, async (res, req) => {
+app.get('/lightswitch/api/service/bulk/status/*', async (res, req) => {
     res.status(200).send({
         "serviceInstanceId": "fortnite",
         "status": "UP",

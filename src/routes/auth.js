@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 
-app.post('/account/api/oauth/token', async (req, res) => {
+app.post('/account/api/oauth/token/*', async (req, res) => {
     res.status(200).send({
      access_token: "eg1~fortnite",
      expires_in: 28800,
@@ -21,7 +21,7 @@ app.post('/account/api/oauth/token', async (req, res) => {
     });
 }); //proper no skid 100%
 
-app.post('/account/api/oauth/verify', async (req, res) => {
+app.post('/account/api/oauth/verify/*', async (req, res) => {
     res.status(200).send({
      access_token: "eg1~fortnite",
      expires_in: 28800,
@@ -41,7 +41,7 @@ app.post('/account/api/oauth/verify', async (req, res) => {
     });
 });
 
-app.delete('/account/api/oauth/sessions/kill', async (req, res) => {
+app.delete('/account/api/oauth/sessions/kill/*', async (req, res) => {
     res.status(200).send({
      status: "OK",
         code: 200

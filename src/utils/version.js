@@ -1,19 +1,19 @@
 const express = require("express");
 const app = express();
 
-app.get('/fortnite/api/v2/versioncheck', async (req, res) => {
+app.get('/fortnite/api/v2/versioncheck/*', async (req, res) => {
     res.status(200).send({
      type: "NO_UPDATE"
     });
 });
 
-app.get('/fortnite/api/v2/versioncheck/:version', async (req, res) =>{
+app.get('/fortnite/api/v2/versioncheck/:version/*', async (req, res) =>{
     res.status(200).send({
      type: "NO_UPDATE"
     });
 });
 
-app.get('', async (req, res) => {
+app.get('/fortnite/api/calendar/v1/timeline/*', async (req, res) => {
     res.status(200).send({
     channels: {
         "client-matchmaking": {
