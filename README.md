@@ -1,7 +1,6 @@
 # Crimson
 
-**An open source backend made in Javascript for Fornite!**
-**#MadeForSkids**
+**An open source backend made in Javascript for Fortnite!**
 
 ![Imgbb](https://i.ibb.co/Qj7S2fGt/New-Project-1.png)
 
