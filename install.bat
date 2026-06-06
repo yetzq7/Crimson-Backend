@@ -1,0 +1,22 @@
+@echo off
+title Crimson Dependency Installer
+
+echo Installing packages...
+echo.
+
+echo Running npm install...
+call npm i
+
+echo.
+echo Installing Express...
+call npm install express
+
+echo.
+echo Installing Dotenv...
+call npm install dotenv
+
+echo.
+echo ==========================
+echo Installation Complete!
+echo ==========================
+pause

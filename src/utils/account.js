@@ -51,7 +51,7 @@ app.get('/account/api/public/account/:accountId', async (req, res) => {
     });
 });
 
-app.post('/api/v1/user/setting', async (req,res) => {
+app.post('/api/v1/user/setting', async (req, res) => {
     res.status(200).send({
      status: "OK",
      code: 200

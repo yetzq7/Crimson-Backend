@@ -5,6 +5,11 @@ const app = express();
 
 app.use(express.json());
 
+
+app.get("/", (req, res) => {
+    res.status(200).send("Crimson Backend");
+});
+
 // Routes
 app.use(require("./src/routes/lightswitch.js"));
 app.use(require("./src/routes/contentpages.js"));
@@ -18,6 +23,7 @@ app.use(require("./src/utils/keychain.js"));
 app.use(require("./src/utils/route.js"));
 app.use(require("./src/utils/version.js"));
 
+// port env
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {

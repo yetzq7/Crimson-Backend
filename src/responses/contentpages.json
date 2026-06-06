@@ -1,0 +1,29 @@
+{
+    "jcr:isCheckedOut": true,
+    "_title": "fortnite-game",
+    "lastModified": "2019-11-01T17:33:35.346Z",
+    "pages": {
+        "news": {
+            "news": {
+                "messages": [
+                    {
+                        "image": "https://i.ibb.co/Qj7S2fGt/New-Project-1.png",
+                        "hidden": false,
+                        "messageType": "normal",
+                        "title": "Crimson Backend",
+                        "body": "Made by yetzq",
+                        "spotlight": false
+                    },
+                    {
+                        "image": "https://i.ibb.co/Qj7S2fGt/New-Project-1.png",
+                        "hidden": false,
+                        "messageType": "normal",
+                        "title": "Welcome To The New Season",
+                        "body": "New battle pass, new rewards, and more!",
+                        "spotlight": false
+                    }
+                ]
+            }
+        }
+    }
+}
