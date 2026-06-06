@@ -31,6 +31,12 @@ app.use(require("./src/utils/keychain.js"));
 app.use(require("./src/utils/route.js"));
 app.use(require("./src/utils/version.js"));
 
+// Mob thingy
+const MOBILE = process.env.MOBILE === "true";
+
+if (MOBILE) {
+  app.use(require("./src/utils/mobile"));
+}
 // port env
 const PORT = process.env.PORT || 3000;
 

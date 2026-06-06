@@ -29,9 +29,8 @@ app.get('/fortnite/api/calendar/v1/timeline', async (req, res) => {
                 state: {
                     activeStorefronts: [],
                     eventNamedWeights: {},
-                    seasonNumber: Number(process.env.SEASON), // Or whatever build you are using
-                    seasonTemplateId: "AthenaSeason:athenaseason3",
-                    seasonNumber: Number(process.env.ATHENASEASON),
+                    seasonNumber: Number(process.env.SEASON), // Or whatever build you are ur on
+                    seasonTemplateID: Number(process.env.ATHENASEASON),
                     matchXpBonusPoints: 0,
                     seasonBegin: "2020-01-01T00:00:00Z",
                     seasonEnd: "9999-01-01T00:00:00Z",
