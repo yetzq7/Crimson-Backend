@@ -11,13 +11,7 @@
 # Features
 - Nothing rn
 
-# Future Features
 
-- [ ] Universal Arena Support
-- [ ] Matchmaking V2
-- [ ] XMPP
-- [ ] Easy Config
-- [ ] Athena profiles (for custom paks like retrac and stellar)
 
 
 
