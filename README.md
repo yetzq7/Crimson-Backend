@@ -9,7 +9,8 @@
 </a>
 
 # Features
-- Nothing rn
+- [X] Mobile Login Page
+- [ ] nothing else rn
 
 
 
