@@ -8,6 +8,11 @@
   <img src="https://img.shields.io/badge/written%20in-javascript-f7df1e.svg?style=for-the-badge&logo=javascript&logoColor=black" alt="Written in JavaScript" />
 </a>
 
+## Requirements
+
+Latest [Node.JS](https://nodejs.org/en/download/current)
+Then simply run install.bat to install the dependencies
+
 # Features
 - [X] Mobile Login Page
 - [ ] nothing else rn
