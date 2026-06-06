@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Login</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, #520000, #520000);
+        font-family: Arial, sans-serif;
+    }
+
+    .login-box {
+        position: relative;
+        z-index: 2;
+        width: 340px;
+        padding: 28px;
+        border-radius: 16px;
+        background: rgba(41, 0, 0, 0.85);
+        border: 1px solid rgba(75, 0, 0, 0.08);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 35px rgba(80, 0, 0, 0.45);
+    }
+
+    .login-box h2 {
+        color: white;
+        text-align: center;
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+
+    .input-group {
+        margin-bottom: 14px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 14px;
+        border-radius: 10px;
+        border: 1px solid rgba(179, 16, 16, 0.08);
+        background: rgba(201, 7, 7, 0.05);
+        color: white;
+        outline: none;
+        transition: 0.2s;
+        font-size: 14px;
+    }
+
+    .input-group input:focus {
+        border-color: #60a5fa;
+        background: rgba(255,255,255,0.08);
+    }
+
+    .error-field {
+        border-color: #ef4444 !important;
+    }
+
+    .error-msg {
+        display: none;
+        margin-bottom: 12px;
+        color: #f87171;
+        font-size: 13px;
+    }
+
+    .login-btn {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        background: #c00909;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+        position: relative;
+    }
+
+    .login-btn:hover {
+        background: #cc0000;
+    }
+
+    .login-btn.loading {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    .login-btn.loading::after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        border: 2px solid rgba(255,255,255,0.3);
+        border-top: 2px solid white;
+        border-radius: 50%;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+        to {
+            transform: translateY(-50%) rotate(360deg);
+        }
+    }
+
+    #snow {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+</style>
+</head>
+<body>
+
+<canvas id="snow"></canvas>
+
+<div class="login-box">
+    <h2>Crimson Login</h2>
+
+    <div id="errMsg" class="error-msg"></div>
+
+    <div class="input-group">
+        <input
+            type="text"
+            id="username"
+            placeholder="Username"
+            autocomplete="off"
+        />
+    </div>
+
+    <button id="loginBtn" class="login-btn">
+        Sign In
+    </button>
+</div>
+
+<script>
+    function redirect() {
+        const usernameEl = document.getElementById("username");
+        const username = usernameEl.value.trim();
+        const btn = document.getElementById("loginBtn");
+
+        usernameEl.classList.remove("error-field");
+        document.getElementById("errMsg").style.display = "none";
+
+        if (!username) {
+            usernameEl.classList.add("error-field");
+            showErr("Please enter a username");
+            return;
+        }
+
+        btn.disabled = true;
+        btn.classList.add("loading");
+        btn.innerText = "Signing In";
+
+        setTimeout(() => {
+            window.location.href =
+                `com.epicgames.fortnite://authorize/?code=${encodeURIComponent(username)}`;
+        }, 400); // thanks razer
+    }
+
+    function showErr(msg) {
+        const err = document.getElementById("errMsg");
+        err.textContent = msg;
+        err.style.display = "block";
+    }
+
+    document.getElementById("loginBtn")
+        .addEventListener("click", redirect);
+
+    document.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+            redirect();
+        }
+    });
+
+    const canvas = document.getElementById("snow");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const snowAmount = 100;
+    const snowColor = "white";
+    const minSize = 1;
+    const maxSize = 4;
+    const snowSpeed = 1;
+
+    const snowflakes = [];
+
+    for (let i = 0; i < snowAmount; i++) {
+        snowflakes.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            radius: Math.random() * maxSize + minSize,
+            speedY: Math.random() * snowSpeed + 0.5,
+            speedX: Math.random() * 0.5 - 0.25
+        });
+    }
+
+    function drawSnow() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = snowColor;
+        ctx.beginPath();
+
+        for (const flake of snowflakes) {
+            ctx.moveTo(flake.x, flake.y);
+            ctx.arc(
+                flake.x,
+                flake.y,
+                flake.radius,
+                0,
+                Math.PI * 2
+            );
+
+            flake.y += flake.speedY;
+            flake.x += flake.speedX;
+
+            if (flake.y > canvas.height) {
+                flake.y = -5;
+                flake.x = Math.random() * canvas.width;
+            }
+
+            if (flake.x > canvas.width) flake.x = 0;
+            if (flake.x < 0) flake.x = canvas.width;
+        }
+
+        ctx.fill();
+        requestAnimationFrame(drawSnow);
+    }
+
+    drawSnow();
+
+    window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
+</script>
+
+</body>
+</html>

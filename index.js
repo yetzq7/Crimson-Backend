@@ -1,6 +1,8 @@
 const express = require("express");
 require("dotenv").config();
 
+const path = require("path");
+
 const app = express();
 
 app.use(express.json());
@@ -8,6 +10,10 @@ app.use(express.json());
 
 app.get("/", (req, res) => {
     res.status(200).send("Crimson Backend");
+});
+
+app.get("/mobile", (req, res) => {
+    res.sendFile(path.join(__dirname, "Mobile", "Login.html"));
 });
 
 // Routes
