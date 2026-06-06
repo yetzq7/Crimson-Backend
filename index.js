@@ -16,6 +16,8 @@ app.get("/mobile", (req, res) => {
     res.sendFile(path.join(__dirname, "Mobile", "Login.html"));
 });
 
+console.log("Mobile Login Page started on 3551/mobile");
+
 // Routes
 app.use(require("./src/routes/lightswitch.js"));
 app.use(require("./src/routes/contentpages.js"));
@@ -35,3 +37,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
 console.log(`Crimson started on ${PORT}`);
 });
+
+
