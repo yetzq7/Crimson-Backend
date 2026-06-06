@@ -12,9 +12,15 @@ app.get("/", (req, res) => {
     res.status(200).send("Crimson Backend");
 });
 
-app.get("/mobile", (req, res) => {
+
+const MOBILE_LOGIN = process.env.MOBILE_LOGIN == "true";
+
+if (MOBILE_LOGIN) {
+        app.get("/mobile", (req, res) => {
     res.sendFile(path.join(__dirname, "Mobile", "Login.html"));
-});
+})  
+}
+
 
 console.log("Mobile Login Page started on 3551/mobile");
 
