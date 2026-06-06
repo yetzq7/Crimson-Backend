@@ -10,7 +10,8 @@
 
 ## Requirements
 
-Latest [Node.JS](https://nodejs.org/en/download/current)
+Install the latest [Node.JS](https://nodejs.org/en/download/current)
+
 Then simply run install.bat to install the dependencies
 
 # Features
