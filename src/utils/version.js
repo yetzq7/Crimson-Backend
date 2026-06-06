@@ -1,19 +1,19 @@
 const express = require("express");
 const app = express();
 
-app.get('/fortnite/api/v2/versioncheck/*', async (req, res) => {
+app.get('/fortnite/api/v2/versioncheck', async (req, res) => {
     res.status(200).send({
      type: "NO_UPDATE"
     });
 });
 
-app.get('/fortnite/api/v2/versioncheck/:version/*', async (req, res) =>{
+app.get('/fortnite/api/v2/versioncheck/:version', async (req, res) =>{
     res.status(200).send({
      type: "NO_UPDATE"
     });
 });
 
-app.get('/fortnite/api/calendar/v1/timeline/*', async (req, res) => {
+app.get('/fortnite/api/calendar/v1/timeline', async (req, res) => {
     res.status(200).send({
     channels: {
         "client-matchmaking": {
@@ -27,7 +27,7 @@ app.get('/fortnite/api/calendar/v1/timeline/*', async (req, res) => {
                 state: {
                     activeStorefronts: [],
                     eventNamedWeights: {},
-                    seasonNumber: 10.20, // Or whatever build you are using
+                    seasonNumber: 3.5, // Or whatever build you are using
                     seasonTemplateId: "AthenaSeason:athenaseason12",
                     matchXpBonusPoints: 0,
                     seasonBegin: "2020-01-01T00:00:00Z",
