@@ -27,11 +27,13 @@ app.get('/account/api/public/account', async (req, res) => {
     });
 });
 
+const NAME = process.env.NAME;
+
 app.get('/account/api/public/account/:accountId', async (req, res) => {
     res.status(200).send({
     id: "fortnite",
     displayName: "fortnite",
-    name: "fortnite",
+    name: process.env.NAME,
     email: "fortnite@fortnite.dev",
     failedLoginAttempts: 0,
     lastLogin: "Timestamp",

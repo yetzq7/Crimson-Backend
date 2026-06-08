@@ -1,4 +1,7 @@
 const express = require("express");
+
+// const mongoose = require("mongoose");
+
 require("dotenv").config();
 
 const path = require("path");
@@ -67,3 +70,6 @@ console.log(banner);
 app.listen(PORT, () => {
 console.log(`Crimson started on ${PORT}`);
 });
+
+
+module.exports = app;
