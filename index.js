@@ -48,7 +48,7 @@ const PORT = process.env.PORT || 3000;
 const MOBILE_LOGIN = process.env.MOBILE_LOGIN == "true";
 
 if (MOBILE_LOGIN) {
-    app.get("/api/mobile", (req, res) => {
+    app.get("/login", (req, res) => {
         res.sendFile(path.join(__dirname, "Mobile", "Login.html"));
     });
 
