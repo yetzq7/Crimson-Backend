@@ -19,7 +19,7 @@ app.get("/launcher/api/public/distributionpoints", (req, res) => {
   res.json({ distributions });
 });
 
-// optional trailing slash support
+// optional
 app.get("/launcher/api/public/distributionpoints/", (req, res) => {
   res.json({ distributions });
 });
@@ -77,7 +77,7 @@ app.get(
   async (req, res) => {
     const filePath = path.join(
       __dirname,
-      "public/clouddir/manifest.manifest"
+      "responses/clouddir/Crimson.manifest" // forgor to change directory since im not doing public
     );
 
     const data = await fs.promises.readFile(filePath);
@@ -90,7 +90,7 @@ app.get(
 app.get(
   "/Builds/Fortnite/Content/CloudDir/manifest/:file.ini",
   async (req, res) => {
-    const filePath = path.join(__dirname, "public/clouddir/Full.ini");
+    const filePath = path.join(__dirname, "responses/clouddir/Full.ini");
 
     const data = await fs.promises.readFile(filePath);
 
@@ -102,7 +102,7 @@ app.get(
 app.get(
   "/Builds/Fortnite/Content/CloudDir/:file.chunk",
   async (req, res) => {
-    const filePath = path.join(__dirname, "public/clouddir/manifest.chunk");
+    const filePath = path.join(__dirname, "responses/clouddir/Crimson.chunk");
 
     const data = await fs.promises.readFile(filePath);
 

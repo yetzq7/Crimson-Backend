@@ -19,6 +19,32 @@ app.post('/account/api/oauth/token', async (req, res) => {
      in_app_id: "fornite",
      device_id: "fornite"
     });
+
+    switch (req.body.grant_type) {
+
+    case "authorization_code":
+    if (!req.body.code) {
+        return res.status(400).json({ error: "invalid!" });
+    }
+
+    const parts = req.body.code.split(":");
+    if (parts.length < 2) {
+        return res.status(400).json({ error: "invalid code format!" });
+    }
+
+    let authUsername;
+    try {
+        authUsername = decodeURIComponent(parts.slice(1).join(":"));
+    } catch (e) {
+        return res.status(400).json({ error: "invalid!" });
+    }
+
+    req.user = await User.findOne({ usernam: authusernam.toLowerCase() }).lean();
+    if (!req.user || !(await bcrypt.compare(authusernam, req.user.usernam))) {
+        return res.status(400).json({ error: "invalid!" });
+    }
+     break;
+}
 }); //proper no skid 100%
 
 app.post('/account/api/oauth/verify', async (req, res) => {

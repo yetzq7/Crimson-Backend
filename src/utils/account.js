@@ -32,9 +32,9 @@ const NAME = process.env.NAME;
 app.get('/account/api/public/account/:accountId', async (req, res) => {
     res.status(200).send({
     id: "fortnite",
-    displayName: "fortnite",
+    displayName: process.env.NAME,
     name: process.env.NAME,
-    email: "fortnite@fortnite.dev",
+    email: "fortnite@crimsom.dev",
     failedLoginAttempts: 0,
     lastLogin: "Timestamp",
     numberOfDisplayNameChanges: 0,

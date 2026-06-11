@@ -16,7 +16,11 @@ echo Installing Dotenv...
 call npm install dotenv
 
 echo.
+echo Installing discord.js...
+call npm install discord.js
+
+echo.
 echo ==========================
-echo Installation Complete!
+echo Packages installed
 echo ==========================
 pause

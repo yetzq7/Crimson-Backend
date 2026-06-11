@@ -33,10 +33,18 @@ const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
 const LOG = process.env.LOG == "true";
 
 if (LOG) {
-    console.log('============== Console Logs Enabled =====================')
+    console.log('Console Logs Enabled')
 }
 
-// Mob thingy
+// I KNOOW BRO I DO THE SAME THING FOR ENV SHIT
+const DISCORD_BOT = process.env.DISCORD_BOT === "true";
+
+if (DISCORD_BOT) {
+    app.use(require("./bot/index.js"));
+    console.log("Discord Bot Enabled")
+}   
+
+// Mobile
 const MOBILE = process.env.MOBILE === "true";
 
 if (MOBILE) {
@@ -48,7 +56,7 @@ const PORT = process.env.PORT || 3000;
 const MOBILE_LOGIN = process.env.MOBILE_LOGIN == "true";
 
 if (MOBILE_LOGIN) {
-    app.get("/login", (req, res) => {
+    app.get("/api/mobile", (req, res) => {
         res.sendFile(path.join(__dirname, "Mobile", "Login.html"));
     });
 
