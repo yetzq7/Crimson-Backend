@@ -1,4 +1,4 @@
-const express = require("express");
+const Express = require("express");
 const app = express();
 
 app.get('/lightswitch/api/service/Fortnite/status', async (req, res) => {

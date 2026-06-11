@@ -1,7 +1,6 @@
 const express = require("express")
 const app = express();
 
-
 app.post('/fortnite/api/game/v2/tryPlayOnPlatform/account/:accountId', async (req, res) => {
     res.setHeader("Content-Type", "text/plain");
     res.status(200).send("true");
