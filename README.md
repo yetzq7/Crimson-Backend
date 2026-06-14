@@ -14,7 +14,7 @@ Install the latest [Node.JS](https://nodejs.org/en/download/current)
 
 Then simply run install.bat to install the dependencies
 
-Big thanks to [kera](https://github.com/itzkera) for helping me fix some issues!
+## Big thanks to [kera](https://github.com/itzkera) for helping me fix some issues!
 # Features
 - [x] Lobby Support (Tested on S7 and S8)
 - [X] Mobile Login Page (mobile support soon ig)
