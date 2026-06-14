@@ -23,8 +23,8 @@ app.use(require("./src/utils/account.js"));
 app.use(require("./src/utils/keychain.js"));
 app.use(require("./src/utils/route.js"));
 app.use(require("./src/utils/version.js"));
-const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
-// app.use(require("./src/utils/matchmaker.js"));
+//const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
+
 
 const LOG = process.env.LOG == "true";
 
@@ -32,7 +32,6 @@ if (LOG) {
     console.log('Console Logs Enabled')
 }
 
-// I KNOOW BRO I DO THE SAME THING FOR ENV SHIT
 const DISCORD_BOT = process.env.DISCORD_BOT === "true";
 
 if (DISCORD_BOT) {
@@ -40,13 +39,12 @@ if (DISCORD_BOT) {
     console.log("Discord Bot Enabled")
 }   
 
-// Mobile
 const MOBILE = process.env.MOBILE === "true";
 
 if (MOBILE) {
   app.use(require("./src/utils/mobile.js"));
 }
-// port env
+
 const PORT = process.env.PORT || 3000;
 
 const MOBILE_LOGIN = process.env.MOBILE_LOGIN == "true";

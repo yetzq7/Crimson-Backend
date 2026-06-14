@@ -8,6 +8,7 @@ const port = process.env.MM_PORT;
 const app = express();
 app.use(express.json());
 
+// not finished/proper
 module.exports = async (ws) => {
     function Connecting() {
         ws.send(JSON.stringify({
