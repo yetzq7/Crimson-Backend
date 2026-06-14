@@ -23,7 +23,7 @@ app.use(require("./src/utils/account.js"));
 app.use(require("./src/utils/keychain.js"));
 app.use(require("./src/utils/route.js"));
 app.use(require("./src/utils/version.js"));
-//const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
+const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
 
 
 const LOG = process.env.LOG == "true";
