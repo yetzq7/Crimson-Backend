@@ -17,12 +17,13 @@ app.use(require("./src/routes/contentpages.js"));
 app.use(require("./src/routes/auth.js"));
 app.use(require("./src/routes/cloudstorage.js"));
 app.use(require("./src/routes/route.js"));
+app.use(require("./src/routes/storefront.js"));
 
 // Utils
 app.use(require("./src/utils/mcp.js"));
 app.use(require("./src/utils/account.js"));
-app.use(require("./src/utils/keychain.js"));
 app.use(require("./src/utils/version.js"));
+
 //app.use(require("./src/utils/logger.js"));s
 //const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
 
