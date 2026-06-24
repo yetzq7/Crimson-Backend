@@ -16,7 +16,7 @@ Then simply run install.bat to install the dependencies
 
 ## Big thanks to [kera](https://github.com/itzkera) for helping me fix some issues!
 # Features
-- [x] Lobby Support (Tested on S7, S8 and S12)
+- [x] Lobby Support (Tested on: S7, S8, S12, and S13)
 - [X] Mobile Login Page (mobile support soon ig)
 
 
