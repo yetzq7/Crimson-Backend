@@ -1,0 +1,44 @@
+{
+    "contentType": "collection",
+    "contentId": "motd-default-collection",
+    "tcId": "634e8e85-e2fc-4c68-bb10-93604cf6605f",
+    "contentItems": [
+      {
+        "contentType": "content-item",
+        "contentId": "46874c56-0973-4cbe-ac98-b580c5b36df5",
+        "tcId": "61fb3dd8-f23d-45cc-9058-058ab223ba5c",
+        "contentFields": {
+          "body": {
+            "en": "Crimson Backend"
+          },
+          "entryType": "Website",
+          "image": [
+            {
+              "width": 1920,
+              "height": 1080,
+              "url": "https://i.ibb.co/kgCXS4JS/1xv5ejvwfcab1.jpg"
+            }
+          ],
+          "tabTitleOverride": "Reload Backend",
+          "tileImage": [
+            {
+              "width": 1024,
+              "height": 512,
+              "url": "https://i.ibb.co/kgCXS4JS/1xv5ejvwfcab1.jpg"
+            }
+          ],
+          "title": {
+            "en": "Crimson Backend - made by yetzq"
+          },
+          "videoAutoplay": false,
+          "videoLoop": false,
+          "videoMute": false,
+          "videoStreamingEnabled": false,
+          "websiteButtonText": "CRIMSON - GITHUB",
+          "websiteURL": "https://discord.gg/ogfncenter"
+        },
+        "contentHash": "crimson67",
+        "contentSchemaName": "MotdWebsiteNewsWithVideo"
+        }
+    ]
+}

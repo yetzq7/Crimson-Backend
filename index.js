@@ -16,28 +16,16 @@ app.use(require("./src/routes/lightswitch.js"));
 app.use(require("./src/routes/contentpages.js"));
 app.use(require("./src/routes/auth.js"));
 app.use(require("./src/routes/cloudstorage.js"));
+app.use(require("./src/routes/route.js"));
 
 // Utils
 app.use(require("./src/utils/mcp.js"));
 app.use(require("./src/utils/account.js"));
 app.use(require("./src/utils/keychain.js"));
-app.use(require("./src/utils/route.js"));
 app.use(require("./src/utils/version.js"));
-const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
+//app.use(require("./src/utils/logger.js"));s
+//const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
 
-
-const LOG = process.env.LOG == "true";
-
-if (LOG) {
-    console.log('Console Logs Enabled')
-}
-
-const DISCORD_BOT = process.env.DISCORD_BOT === "true";
-
-if (DISCORD_BOT) {
-    app.use(require("./bot/index.js"));
-    console.log("Discord Bot Enabled")
-}   
 
 const MOBILE = process.env.MOBILE === "true";
 
