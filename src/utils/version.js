@@ -22,7 +22,7 @@ app.get('/fortnite/api/v2/versioncheck/:version', async (req, res) =>{
 });
 
 app.get('/fortnite/api/calendar/v1/timeline', async (req, res) => {
-    const season =  12;
+    const season =  16;
     // season = season 7
     const lobby = `LobbySeason${season}`;
 

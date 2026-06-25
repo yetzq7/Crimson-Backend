@@ -24,9 +24,6 @@ app.use(require("./src/utils/mcp.js"));
 app.use(require("./src/utils/account.js"));
 app.use(require("./src/utils/version.js"));
 
-//app.use(require("./src/utils/logger.js"));s
-//const { Log, LogError, LogDebug } = require("./src/utils/logger.js");
-
 
 const MOBILE = process.env.MOBILE === "true";
 
@@ -45,8 +42,6 @@ if (MOBILE_LOGIN) {
 
     console.log(`Mobile Login Page started on http://localhost:${PORT}/api/mobile`);
 }
-
-
 
 // larplarp
 const banner = `
