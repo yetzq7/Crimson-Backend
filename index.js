@@ -9,6 +9,7 @@ app.get("/", (req, res) => {
 });
 
 // Routes
+// will move soon
 app.use(require("./src/routes/lightswitch.js"));
 app.use(require("./src/routes/contentpages.js"));
 app.use(require("./src/routes/auth.js"));
@@ -17,6 +18,8 @@ app.use(require("./src/routes/route.js"));
 app.use(require("./src/routes/storefront.js"));
 app.use(require("./src/routes/events.js"));
 app.use(require("./src/routes/privacy.js"));
+app.use(require("./src/routes/waitingroom.js"));
+app.use(require("./src/routes/features.js"));
 
 // Utils
 app.use(require("./src/utils/mcp.js"));
