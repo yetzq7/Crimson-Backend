@@ -2,6 +2,41 @@
     "jcr:isCheckedOut": true,
     "_title": "fortnite-game",
     "lastModified": "2018-06-07T17:33:35.346Z",
+    "playlistinformation": {
+        "frontend_matchmaking_header_style": "None",
+        "_title": "playlistinformation",
+        "frontend_matchmaking_header_text": "",
+        "playlist_info": {
+            "_type": "Playlist Information",
+            "playlists": [
+                {
+                    "image": "https://i.ibb.co/Fb92GrMs/Fortnite-blog-creative-CM07-News-Featured-Creative-Mode-Announce-1920x1080-f2b3606efe82d43a4a89ba8ef.jpg",
+                    "playlist_name": "Playlist_PlaygroundV2",
+                    "_type": "FortPlaylistInfo"
+                },  
+                {
+                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "playlist_name": "Playlist_DefaultSolo",
+                    "_type": "FortPlaylistInfo"
+                },
+                {
+                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "playlist_name": "Playlist_DefaultDuo",
+                    "_type": "FortPlaylistInfo"
+                },
+                {
+                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "playlist_name": "Playlist_DefaultSquad",
+                    "_type": "FortPlaylistInfo"
+                },
+                {
+                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "playlist_name": "Playlist_Trios",
+                    "_type": "FortPlaylistInfo"
+                }
+            ]
+        }
+    },
     "pages": {
         "news": {
             "news": {
