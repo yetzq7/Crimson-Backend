@@ -18,6 +18,8 @@ app.use(require("./src/routes/auth.js"));
 app.use(require("./src/routes/cloudstorage.js"));
 app.use(require("./src/routes/route.js"));
 app.use(require("./src/routes/storefront.js"));
+app.use(require("./src/routes/events.js"));
+app.use(require("./src/routes/privacy.js"));
 
 // Utils
 app.use(require("./src/utils/mcp.js"));

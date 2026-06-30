@@ -24,6 +24,44 @@
                     }
                 ]
             }
+        },
+        "tournamentinformation": {
+            "_title": "tournamentinformation",
+            "_noIndex": false,
+            "_activeDate": "2018-11-13T22:32:47.734Z",
+            "lastModified": "2019-11-01T17:33:35.346Z",
+            "_locale": "en-US",
+            "tournament_info": {
+                "_type": "Tournaments Info",
+                "tournaments": [
+                    {
+                        "title_color": "FFFFFF",
+                        "loading_screen_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "background_text_color": "1B1B1B",
+                        "background_right_color": "DD091A",
+                        "poster_back_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "_type": "Tournament Display Info",
+                        "pin_earned_text": "hi!",
+                        "tournament_display_id": "ArenaSolo",
+                        "highlight_color": "FFFFFF",
+                        "schedule_info": "November 2nd & 3rd: 2pm - 5pm JST",
+                        "primary_color": "FFFFFF",
+                        "flavor_description": "cool",
+                        "poster_front_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "short_format_title": "Event Sessions",
+                        "title_line_2": "Arena",
+                        "title_line_1": "67",
+                        "shadow_color": "1B1B1B",
+                        "details_description": "ok",
+                        "background_left_color": "F81B2D",
+                        "long_format_title": "cheetos",
+                        "poster_fade_color": "DD091A",
+                        "secondary_color": "1B1B1B",
+                        "playlist_tile_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "base_color": "FFFFFF"
+                    }
+                ]
+            }
         }
     }
 }

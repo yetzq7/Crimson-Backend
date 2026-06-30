@@ -19,7 +19,10 @@ Then simply run install.bat to install the dependencies
 # Features
 - [x] Lobby Support (Tested on: S7, S8, S12, S13 and partial support on S16)
 
-
+# To do
+- [ ] MCP
+- [ ] Matchmaker
+- [ ] Add cool features
 
 
 
