@@ -6,8 +6,9 @@ const path = require("path");
 
 // start on events and tournament handling stuff
 app.get("/api/v1/events/Fortnite/download/:accountId", async (req, res) => {
-    const events = JSON.parse(fs.readFileSync(path.join(__dirname, "../responses/eventlistactive.json"), "utf8"));
-    res.status(200).json(events);
+      //const eventsDataPath = path.join(__dirname, "./../responses/eventlistactive.json");
+      const events = JSON.parse(fs.readFileSync(path.join(__dirname, "../responses/eventlistactive.json"), "utf8"));
+      res.status(200).json(events);
 });
 app.get("/api/v1/players/Fortnite/tokens", async (req, res) => {
     res.status(200).send({

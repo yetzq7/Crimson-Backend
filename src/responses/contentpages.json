@@ -15,23 +15,38 @@
                     "_type": "FortPlaylistInfo"
                 },  
                 {
-                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "image": "https://ibb.co/8n0Vn20L",
                     "playlist_name": "Playlist_DefaultSolo",
                     "_type": "FortPlaylistInfo"
                 },
                 {
-                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "image": "https://i.ibb.co/j9t5NbLD/images-6.jpg",
                     "playlist_name": "Playlist_DefaultDuo",
                     "_type": "FortPlaylistInfo"
                 },
                 {
-                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "image": "https://i.ibb.co/HT0RDY7n/squads.png",
                     "playlist_name": "Playlist_DefaultSquad",
                     "_type": "FortPlaylistInfo"
                 },
                 {
-                    "image": "https://i.ibb.co/ycL7T4ky/wallpaperflare-com-wallpaper.jpg",
+                    "image": "https://i.ibb.co/Xx6qhh06/trios.png",
                     "playlist_name": "Playlist_Trios",
+                    "_type": "FortPlaylistInfo"
+                },
+                {
+                    "image": "https://i.ibb.co/2HhNf1S/50vfifty55.png",
+                    "playlist_name": "Playlist_50v50",
+                    "_type": "FortPlaylistInfo"
+                },
+                {
+                    "image": "https://i.ibb.co/1j79c8c/playgroundv1.webp",
+                    "playlist_name": "Playlist_Playground",
+                    "_type": "FortPlaylistInfo"
+                },
+                {
+                    "image": "https://i.ibb.co/vvVxqgPP/arenabox1.png",
+                    "playlist_name": "Playlist_ShowdownAlt_Solo",
                     "_type": "FortPlaylistInfo"
                 }
             ]
@@ -71,18 +86,18 @@
                 "tournaments": [
                     {
                         "title_color": "FFFFFF",
-                        "loading_screen_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "loading_screen_image": "https://i.ibb.co/vvVxqgPP/arenabox1.png",
                         "background_text_color": "1B1B1B",
                         "background_right_color": "DD091A",
-                        "poster_back_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "poster_back_image": "https://i.ibb.co/vvVxqgPP/arenabox1.png",
                         "_type": "Tournament Display Info",
                         "pin_earned_text": "hi!",
                         "tournament_display_id": "ArenaSolo",
                         "highlight_color": "FFFFFF",
-                        "schedule_info": "November 2nd & 3rd: 2pm - 5pm JST",
+                        "schedule_info": "24/7",
                         "primary_color": "FFFFFF",
                         "flavor_description": "cool",
-                        "poster_front_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "poster_front_image": "https://i.ibb.co/vvVxqgPP/arenabox1.png",
                         "short_format_title": "Event Sessions",
                         "title_line_2": "Arena",
                         "title_line_1": "67",
@@ -92,9 +107,36 @@
                         "long_format_title": "cheetos",
                         "poster_fade_color": "DD091A",
                         "secondary_color": "1B1B1B",
-                        "playlist_tile_image": "https://i.ibb.co/hxhgCwD8/Arena-Solo-Playlist-Fortnite-1.webp",
+                        "playlist_tile_image": "https://i.ibb.co/vvVxqgPP/arenabox1.png",
+                        "base_color": "FFFFFF"
+                    },
+                    {
+                        "title_color": "FFFFFF",
+                        "loading_screen_image": "https://i.ibb.co/7tx1SBSM/images-4.jpg",
+                        "background_text_color": "1B1B1B",
+                        "background_right_color": "DD091A",
+                        "poster_back_image": "https://i.ibb.co/7tx1SBSM/images-4.jpg",
+                        "_type": "Tournament Display Info",
+                        "pin_earned_text": "wow!",
+                        "tournament_display_id": "powercup1",
+                        "highlight_color": "FFFFFF",
+                        "schedule_info": "24/7",
+                        "primary_color": "FFFFFF",
+                        "flavor_description": "cool",
+                        "poster_front_image": "https://i.ibb.co/7tx1SBSM/images-4.jpg",
+                        "short_format_title": "Event Sessions",
+                        "title_line_2": "Crimson Cup",
+                        "title_line_1": "ig",
+                        "shadow_color": "1B1B1B",
+                        "details_description": "ok",
+                        "background_left_color": "F81B2D",
+                        "long_format_title": "cheetos part 2",
+                        "poster_fade_color": "DD091A",
+                        "secondary_color": "1B1B1B",
+                        "playlist_tile_image": "https://i.ibb.co/hFQnQGJV/images-5.jpg",
                         "base_color": "FFFFFF"
                     }
+                    
                 ]
             }
         }
