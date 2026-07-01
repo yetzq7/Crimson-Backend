@@ -4,6 +4,11 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 
+const colors = {
+  reset: '\x1b[0m',
+  crimson: '\x1b[38;2;220;20;60m',
+};
+
 app.get("/", (req, res) => {
     res.status(200).send("Crimson Backend");
 });
@@ -61,7 +66,7 @@ const banner = `
 console.log(banner);
 
 app.listen(PORT, () => {
-    console.log(`Crimson started on ${PORT}`);
+    console.log(`Crimson started on${colors.crimson} ${PORT} ${colors.reset}`);
 });
 
 module.exports = app;

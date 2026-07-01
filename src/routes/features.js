@@ -7,7 +7,7 @@ app.get('/fortnite/api/game/v2/enabled_features', async (req, res) => {
     return res.json({})
 });
 
-app.get('/fortnite/api/game/v2/grant_access', async (req, res) => {
+app.get('/fortnite/api/game/v2/grant_access/', async (req, res) => {
     return res.json({})
 });
 
