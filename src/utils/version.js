@@ -26,7 +26,6 @@ const SEASON = process.env.SEASON;
 app.get('/fortnite/api/calendar/v1/timeline', async (req, res) => {
 
     const season =  process.env.SEASON;
-    // season = season 7
     const lobby = `LobbySeason${season}`;
 
     res.status(200).send({
