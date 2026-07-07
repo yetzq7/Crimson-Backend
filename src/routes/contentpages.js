@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
+const path = require("path");
+const fs = require("fs");
 
 const contentpages = require("../responses/contentpages.json");
+//const contentpages = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "responses", "contentpages.json"), "utf8"));
 
 app.get('/content/api/pages/fortnite-game', async (req, res) => {
     contentpages.emergencynotice = {
@@ -27,18 +30,10 @@ app.get('/content/api/pages/fortnite-game', async (req, res) => {
     res.status(200).send(contentpages);
 });
 
-app.get('/api/v1/fortnite-br/surfaces/dmotd/target', async (req, res) => {
-    const motdTarget = JSON.parse(JSON.stringify(require("../responses/motd.json")));
-    res.json(motdTarget)
-});
-
-app.get('/api/v1/fortnite-br/surfaces/motd/target', async (req,res) => {
+app.post('/api/v1/fortnite-br/surfaces/motd/target', async (req, res) => {
     const motd = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "responses", "motd.json"), "utf8"));
-    res.status(200).send({
-     status: "OK",
-     code: 200
-    });
+    res.json(motd)
 });
-
+// should work??
 
 module.exports = app;
