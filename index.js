@@ -22,14 +22,13 @@ app.use(require("./src/routes/cloudstorage.js"));
 app.use(require("./src/routes/route.js"));
 app.use(require("./src/routes/storefront.js"));
 app.use(require("./src/routes/events.js"));
-app.use(require("./src/routes/privacy.js"));
-app.use(require("./src/routes/waitingroom.js"));
-app.use(require("./src/routes/features.js"));
+app.use(require("./src/routes/main.js"));
+
 
 // Utils
-app.use(require("./src/utils/mcp.js"));
-app.use(require("./src/utils/account.js"));
-app.use(require("./src/utils/version.js"));
+app.use(require("./src/routes/mcp.js"));
+app.use(require("./src/routes/account.js"));
+app.use(require("./src/routes/version.js"));
 
 
 const LOG = process.env.LOG == "true";
