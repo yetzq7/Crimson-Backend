@@ -21,11 +21,9 @@ app.use((req, res, next) => {
 });
 
 app.get('/fortnite/api/cloudstorage/system', async (req, res) => {
-    const dir = path.join(__dirname, "../../", "CloudStorage");
+    const dir = path.join(__dirname, "../..", "CloudStorage");
     
     let CloudFiles = [];
-
-    // Checking
     if (fs.existsSync(dir)) {
         fs.readdirSync(dir).forEach(name => {
             if (name.toLowerCase().endsWith(".ini")) {
@@ -39,16 +37,28 @@ app.get('/fortnite/api/cloudstorage/system', async (req, res) => {
                     "hash256": crypto.createHash('sha256').update(ParsedFile).digest('hex'),
                     "length": ParsedFile.length,
                     "contentType": "application/octet-stream",
+                    "storageType": "S3",
+                    "storageIds": {},
                     "uploaded": ParsedStats.mtime,
                     "doNotCache": true
                 });
             }
         });
-    } else {
-        console.log('CloudStorage folder not found');
     }
 
     res.json(CloudFiles);
+});
+
+app.get('/fortnite/api/cloudstorage/system/:file', async (req, res) => {
+    const filePath = path.join(__dirname, "../..", "CloudStorage", req.params.file);
+
+    if (!fs.existsSync(filePath)) {
+        return res.status(404).end();
+    }
+
+    const data = fs.readFileSync(filePath);
+    res.set('Content-Type', 'application/octet-stream');
+    return res.status(200).send(data);
 });
 
 app.get('/fortnite/api/cloudstorage/user/:accountId', async (req, res) => {
