@@ -12,7 +12,7 @@ app.get('/fortnite/api/game/v2/grant_access/', async (req, res) => {
 });
 
 app.get('/fortnite/api/game/v2/privacy/account/:accountId', async (req, res) => {
-        privacy.accountId = req.params.accountId;
+    privacy.accountId = req.params.accountId;
     res.json(privacy);
 });
 

@@ -19,7 +19,7 @@ Then simply run install.bat to install the dependencies
 **Big thanks to [kera](https://github.com/itzkera) for helping me fix some issues!**
 
 # Features
-- [x] Lobby Support (Tested on: S7, S8, S12, S13, S14, S15, S16 ,S17)
+- [x] Lobby Support (Tested on: S2-S17)
 
 # To do
 - [ ] MCP
