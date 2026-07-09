@@ -26,7 +26,7 @@ Then simply run install.bat to install the dependencies
 - [ ] Matchmaker
 - [ ] Add cool features
 
-
+**If you want to commit to this project, make a pull request!**
 
 
 
