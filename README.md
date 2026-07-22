@@ -19,12 +19,15 @@ Then simply run install.bat to install the dependencies
 **Big thanks to [kera](https://github.com/itzkera) for helping me fix some issues!**
 
 # Features
-- [x] Lobby Support (Tested on: S2-S17)
+- [X] Lobby Support (Tested on: S2-S17)
+- [X] MCP - credits to [Kera](https://github.com/itzkera)
+- [X] Discord RPC
 
 # To do
-- [ ] MCP
+
+- [ ] Support for S19+
+- [ ] Fix Contentpages
 - [ ] Matchmaker
-- [ ] Add cool features
 
 **If you want to commit to this project, make a pull request!**
 
