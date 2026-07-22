@@ -30,6 +30,15 @@ app.get('/friends/api/v1/:accountId/settings', async (req, res) => {
     });
 });
 
+app.put('/profile/privacy_setting', async (req, res)=> {
+     res.json(privacy);
+});
 
+app.get('/api/v1/events/:gameId/data/:accountId', (req, res) => {
+       res.status(200).send({
+       status: "OK",
+       code: 200
+    });
+});
 
 module.exports = app;

@@ -3,6 +3,10 @@ require("dotenv").config();
 const path = require("path");
 const app = express();
 app.use(express.json());
+const LOG = process.env.LOG == "true";
+const MOBILE = process.env.MOBILE === "true"; // soon ig
+const MOBILE_LOGIN = process.env.MOBILE_LOGIN == "true";
+const RPC = process.env.DISCORD_RPC == "true";
 
 const colors = {
   reset: '\x1b[0m',
@@ -23,15 +27,11 @@ app.use(require("./src/routes/route.js"));
 app.use(require("./src/routes/storefront.js"));
 app.use(require("./src/routes/events.js"));
 app.use(require("./src/routes/main.js"));
-
-
 // Utils
 app.use(require("./src/routes/mcp.js"));
 app.use(require("./src/routes/account.js"));
 app.use(require("./src/routes/version.js"));
 
-
-const LOG = process.env.LOG == "true";
 if (LOG) {
     app.use(require("./src/utils/logger.js").middleware);{
         console.log('Logs enabled')
@@ -39,14 +39,17 @@ if (LOG) {
 }
 
 
-const MOBILE = process.env.MOBILE === "true";
+if (RPC) {
+    require("./src/discord-rpc/rpc.js");
+    console.log("Discord RPC Enabled!");
+}
+
 if (MOBILE) {
   app.use(require("./src/utils/mobile.js"));
 }
 
 const PORT = process.env.PORT || 3000;
 
-const MOBILE_LOGIN = process.env.MOBILE_LOGIN == "true";
 if (MOBILE_LOGIN) {
     app.get("/api/mobile", (req, res) => {
         res.sendFile(path.join(__dirname, "Mobile", "Login.html"));

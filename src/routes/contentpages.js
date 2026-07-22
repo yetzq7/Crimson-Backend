@@ -3,25 +3,12 @@ const app = express();
 const path = require("path");
 const fs = require("fs");
 require("dotenv").config();
-const contentpages = require("../responses/contentpages.json");
-//const contentpages = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "responses", "contentpages.json"), "utf8"));
-const SEASON = process.env.SEASON;
-const WC_LOBBY = process.env.WC_LOBBY == "true";
+const contentpages = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "responses", "contentpages.json"), "utf8"));
+//const contentpages = require("../responses/contentpages.json");
 
 app.get('/content/api/pages/fortnite-game', async (req, res) => {
 
- // if (SEASON == "11") {
-  //    contentpages.dynamicbackgrounds.backgrounds.backgrounds[0].stage = "Winter19";
-   //   contentpages.dynamicbackgrounds.backgrounds.backgrounds[1].stage = "Winter19";
- // }
-
- // if (WC_LOBBY) {
-  //  contentpages.dynamicbackgrounds.backgrounds.backgrounds[0].stage = "worldcup";
-  //  contentpages.dynamicbackgrounds.backgrounds.backgrounds[1].stage = "worldcup";
-  //}
-
- 
-  contentpages.emergencynotice = {
+ contentpages.emergencynotice = {
        news: {
             _type: "Battle Royale News",
             messages: [
@@ -41,7 +28,9 @@ app.get('/content/api/pages/fortnite-game', async (req, res) => {
           lastModified: "2019-10-29T22:32:52.686Z",
           _locale: "en-US"
     }
-    res.status(200).send(contentpages);
+
+     res.status(200).send(contentpages);
+     //res.json(contentpages)
 });
 
 app.post('/api/v1/fortnite-br/surfaces/motd/target', async (req, res) => {
