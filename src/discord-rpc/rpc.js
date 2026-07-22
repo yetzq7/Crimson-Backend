@@ -10,10 +10,10 @@ rpc.on("ready", () => {
     console.log("RPC Connected!");
 
     rpc.setActivity({
-        details: "Crimson",
+        details: "made by yetzq!",
         state: "Playing",
         buttons: [{
-            label: 'Github!',
+            label: 'Crimson - Github!',
             url: 'https://githuub.com/yetzq7/Crimson-Backend'
         }]
     });
