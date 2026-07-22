@@ -23,11 +23,14 @@ Then simply run install.bat to install the dependencies
 - [X] MCP - credits to [Kera](https://github.com/itzkera)
 - [X] Discord RPC
 
-# To do
+# To do/Ideas
 
-- [ ] Support for S19+
-- [ ] Fix Contentpages
+- [ ] Universal Support
+- [X] Fix Contentpages
 - [ ] Matchmaker
+- [ ] Discord Bot
+- [ ] Database
+- [ ] Mobile support
 
 **If you want to commit to this project, make a pull request!**
 
