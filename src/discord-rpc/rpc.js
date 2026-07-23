@@ -1,6 +1,6 @@
 const RPC = require("discord-rpc");
 
-const clientId = "1529385703346012280";
+const clientId = "1529385703346012280"; // dont touch
 
 RPC.register(clientId);
 
