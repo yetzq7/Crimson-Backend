@@ -19,7 +19,7 @@ Then simply run install.bat to install the dependencies
 **Big thanks to [kera](https://github.com/itzkera) for helping me fix some issues!**
 
 # Features
-- [X] Lobby Support (Tested on: S2-S17)
+- [X] Lobby Support (S1-S19)
 - [X] MCP - credits to [Kera](https://github.com/itzkera)
 - [X] Discord RPC
 
@@ -30,7 +30,7 @@ Then simply run install.bat to install the dependencies
 - [ ] Matchmaker
 - [ ] Discord Bot
 - [ ] Database
-- [ ] Mobile support
+- [ ] More MCP ops
 
 **If you want to commit to this project, make a pull request!**
 
