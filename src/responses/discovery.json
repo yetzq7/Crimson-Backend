@@ -1,0 +1,101 @@
+[
+  {
+    "namespace": "fn",
+    "mnemonic": "playlist_defaultsolo",
+    "linkType": "BR:Playlist",
+    "active": true,
+    "disabled": false,
+    "version": 95,
+    "moderationStatus": "Unmoderated",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "descriptionTags": [],
+    "discoveryIntent": "PUBLIC",
+    "metadata": {
+      "product_tag": "Product.Crimson",
+      "image_url": "https://cdn2.unrealengine.com/solo-1920x1080-1920x1080-bc0a5455ce20.jpg",
+      "alt_introduction": {
+        "en": "Go it alone in a battle to be the last one standing."
+      },
+      "locale": "en",
+      "title": "Solo",
+      "matchmaking": {
+        "override_playlist": "playlist_defaultsolo"
+      },
+      "alt_title": {
+        "en": "Solo"
+      },
+      "alt_tagline": {
+        "en": "Go it alone in a battle to be the last one standing."
+      },
+      "tagline": "Go it alone in a battle to be the last one standing.",
+      "introduction": "Go it alone in a battle to be the last one standing."
+    }
+  },
+  {
+    "namespace": "fn",
+    "mnemonic": "playlist_defaultduo",
+    "linkType": "BR:Playlist",
+    "active": true,
+    "disabled": false,
+    "version": 95,
+    "moderationStatus": "Unmoderated",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "descriptionTags": [],
+    "discoveryIntent": "PUBLIC",
+    "metadata": {
+      "product_tag": "Product.Crimson",
+      "image_url": "https://cdn2.unrealengine.com/duos-1920x1080-1920x1080-5a411fe07b21.jpg",
+      "alt_introduction": {
+        "en": "Pair up with a buddy and take everyone else down."
+      },
+      "locale": "en",
+      "title": "Duos",
+      "matchmaking": {
+        "override_playlist": "playlist_defaultduo"
+      },
+      "alt_title": {
+        "en": "Duos"
+      },
+      "alt_tagline": {
+        "en": "Pair up with a buddy and take everyone else down."
+      },
+      "tagline": "Pair up with a buddy and take everyone else down.",
+      "introduction": "Pair up with a buddy and take everyone else down."
+    }
+  },
+  {
+    "namespace": "fn",
+    "mnemonic": "playlist_trios",
+    "linkType": "BR:Playlist",
+    "active": true,
+    "disabled": false,
+    "version": 95,
+    "moderationStatus": "Unmoderated",
+    "accountId": "epic",
+    "creatorName": "Epic",
+    "descriptionTags": [],
+    "discoveryIntent": "PUBLIC",
+    "metadata": {
+      "product_tag": "Product.Crimson",
+      "image_url": "https://cdn2.unrealengine.com/trios-1920x1080-1920x1080-d5054bb9691a.jpg",
+      "alt_introduction": {
+        "en": "Classic Battle Royale with Three-Person Squads."
+      },
+      "locale": "en",
+      "title": "Trios",
+      "matchmaking": {
+        "override_playlist": "playlist_trios"
+      },
+      "alt_title": {
+        "en": "Trios"
+      },
+      "alt_tagline": {
+        "en": "Classic Battle Royale with Three-Person Squads."
+      },
+      "tagline": "Classic Battle Royale with Three-Person Squads.",
+      "introduction": "Classic Battle Royale with Three-Person Squads."
+    }
+  }
+]

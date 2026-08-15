@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const path = require("path");
+const fs = require("fs");
 const app = express();
 app.use(express.json());
 const LOG = process.env.LOG == "true";
@@ -17,20 +18,15 @@ app.get("/", (req, res) => {
     res.status(200).send("Crimson Backend");
 });
 
-// Routes
-// will move soon
-app.use(require("./src/routes/lightswitch.js"));
-app.use(require("./src/routes/contentpages.js"));
-app.use(require("./src/routes/auth.js"));
-app.use(require("./src/routes/cloudstorage.js"));
-app.use(require("./src/routes/route.js"));
-app.use(require("./src/routes/storefront.js"));
-app.use(require("./src/routes/events.js"));
-app.use(require("./src/routes/main.js"));
-// Utils
-app.use(require("./src/routes/mcp.js"));
-app.use(require("./src/routes/account.js"));
-app.use(require("./src/routes/version.js"));
+// better
+const routesPath = path.join(__dirname, "src", "routes");
+
+for (const file of fs.readdirSync(routesPath)) {
+    if (!file.endsWith(".js")) continue;
+
+    const route = require(path.join(routesPath, file));
+    app.use(route);
+}
 
 if (LOG) {
     app.use(require("./src/utils/logger.js").middleware);{

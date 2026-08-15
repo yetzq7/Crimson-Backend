@@ -14,7 +14,7 @@ rpc.on("ready", () => {
         state: "Playing",
         buttons: [{
             label: 'Crimson - Github!',
-            url: 'https://githuub.com/yetzq7/Crimson-Backend'
+            url: 'https://github.com/yetzq7/Crimson-Backend'
         }]
     });
 });

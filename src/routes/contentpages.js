@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const fs = require("fs");
 require("dotenv").config();
-const contentpages = require("../responses/v1.json");
+const contentpages = require("../responses/contentpages.json");
 const motd = require("../responses/motd.json");
 
 app.get('/content/api/pages/fortnite-game', async (req, res) => {
@@ -11,7 +11,7 @@ app.get('/content/api/pages/fortnite-game', async (req, res) => {
 });
 
 app.post('/api/v1/fortnite-br/surfaces/motd/target', async (req, res) => {
-    res.status(200).send(motd);
+    res.json(motd)
 });
 // should work??
 

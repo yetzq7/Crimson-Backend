@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 
+const catalog = require("../responses/catalog.json");
 const keychain = require("../responses/keychain.json");
 
 app.get('/fortnite/api/receipts/v1/account/:accountId/receipts', async (req, res) => {
@@ -11,7 +12,7 @@ app.get('/fortnite/api/receipts/v1/account/:accountId/receipts', async (req, res
 });
 
 app.get('/catalog/api/shared/bulk/offers', (req, res) => {
-    return res.json(require("../responses/storefront/catalog.json"))
+    res.json(catalog)
 });
 
 app.get('/fortnite/api/storefront/v2/keychain', async (req, res) => {
